@@ -106,7 +106,7 @@ public class BongBauDuc_GameManager : MonoBehaviour
 
     private IEnumerator RunTimePlayGame()
     {
-        for(int i = 0; i < 45; i++)
+        for(int i = 0; i < 32; i++)
         {
             if(isEndGame == false)
             {
@@ -115,13 +115,13 @@ public class BongBauDuc_GameManager : MonoBehaviour
                     yield return new WaitForSeconds(1);
                 }
 
-                if(i == 44)
+                if(i == 31)
                 {
                     StartCoroutine(CheckEndGame());
                 }
                 else
                 {
-                    countdownRunGameText.text = (43 - i).ToString(); 
+                    countdownRunGameText.text = (30 - i).ToString(); 
                 }
             }
         }
@@ -728,23 +728,26 @@ public class BongBauDuc_GameManager : MonoBehaviour
     {
         Destroy(BongBauDuc_Player.ins.gameObject);
         playerAlive = true;
-        GameObject[] options = new GameObject[locations.Length];
-        for(int i = 0; i < locations.Length; i++)
-        {
-            if(BongBauDuc_GameManager.ins.locationAlive[i] == true)
-            {
-                options[i] = BongBauDuc_GameManager.ins.locations[i];
-            }
-        }
+        // GameObject[] options = new GameObject[locations.Length];
+        // for(int i = 0; i < locations.Length; i++)
+        // {
+        //     if(BongBauDuc_GameManager.ins.locationAlive[i] == true)
+        //     {
+        //         options[i] = BongBauDuc_GameManager.ins.locations[i];
+        //     }
+        // }
 
-        int ran;
-        do
-        {
-            ran = Random.Range(0, 25);
-        } while(options[ran] == null);
+        // int ran;
+        // do
+        // {
+        //     ran = Random.Range(0, 25);
+        // } while(options[ran] == null);
 
-        var newPlayer = Instantiate(playerPrefab, new Vector3(options[ran].transform.position.x, 0, options[ran].transform.position.z), Quaternion.identity);
+        var newPlayer = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
         newPlayer.GetComponent<BongBauDuc_Player>().joystick = BongBauDuc_DynamicJoystick.ins;
+        StartCoroutine(newPlayer.GetComponent<BongBauDuc_Player>().JustRevive());
+        
+        
         BongBauDuc_DynamicJoystick.ins.gameObject.SetActive(true);
 
         Time.timeScale = 1;

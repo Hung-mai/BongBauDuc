@@ -220,6 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d31e694f3d61b48afa8e9f141e2e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dau: {fileID: 7213525350967087404}
+  than: {fileID: 3947401739234989884}
   collisionEff: {fileID: 1897524327767962004, guid: 83d5860254a65d04798a71f0226f7f09,
     type: 3}
   playerAnimator: {fileID: 0}

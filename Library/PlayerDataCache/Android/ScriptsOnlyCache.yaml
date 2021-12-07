@@ -6,13 +6,16 @@ ScriptsOnlyBuild:
     - BongBauDuc_Fish
     - BongBauDuc_GameManager
     - BongBauDuc_Player
+    - BongBauDuc_ReadFile
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -44,6 +47,8 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -80,19 +85,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10268}
     - Class: 114
-      Script: {instanceID: 10526}
+      Script: {instanceID: 10400}
     - Class: 114
-      Script: {instanceID: 10630}
+      Script: {instanceID: 10528}
     - Class: 114
-      Script: {instanceID: 10724}
+      Script: {instanceID: 10632}
     - Class: 114
-      Script: {instanceID: 10956}
+      Script: {instanceID: 10726}
     - Class: 114
-      Script: {instanceID: 11096}
+      Script: {instanceID: 10958}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11098}
     - Class: 114
-      Script: {instanceID: 11454}
+      Script: {instanceID: 11204}
+    - Class: 114
+      Script: {instanceID: 11456}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -332,6 +339,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: b453c59174e0f617fd466ae0fd4ae9e1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BongBauDuc_ReadFile
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -398,7 +411,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: ae43f29565abd2835ce82c11638b6e56
+      Hash: dfdd9d86be3c4f90346b17b34800fc64
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BongBauDuc_Player
@@ -482,7 +495,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 59674cb579ad95ed72e2c5d12f7aa14f
+      Hash: fb6d45deaf07b435c1437647bd54112d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BongBauDuc_GameManager
@@ -591,4 +604,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Abi Projects/Prototype/BongBauDuc4.apk
+  playerPath: C:/Abi Projects/Prototype/BongBauDuc6.apk
